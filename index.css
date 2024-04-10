@@ -1,0 +1,104 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px .5rem black;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+:root{
+    font-size: 62.5%;
+}
+body,html{
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body{
+   background-color: #31470bc5;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#containerGraphics{
+    height: 60rem;
+    width: 60rem;
+    border: .1rem solid rgba(0, 0, 0, 0.432);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 1rem .2rem rgba(0, 0, 0, 0.637);
+}
+ul{
+    height: fit-content;
+    width: 30rem;
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: flex-start;
+    border: .1rem solid black;
+    gap: 1rem;
+    margin-top: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.664);
+    background-color:#5F7042;
+    
+}
+li{
+    border: .1rem solid rgba(255, 255, 255, 0.678);
+    padding: .9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: .5rem;
+    border-radius: 1rem;
+    background-color: #0000004f;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.637);
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+    
+}
+h3{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+input{
+    display: block;
+    outline: none;
+    padding: .2rem;
+    border-radius: .5rem;
+    background-color: #fff7f7;
+    color: black;
+    text-shadow: none;
+    font-weight: bold;
+}
+ul:hover > :not(:hover){
+    scale: 0.98;
+    background-color: #00000098;
+}
+li:hover{
+    scale: 1.03;
+    background-color: #2e463269;
+}
+button{
+    width: 10rem;
+    align-self: center;
+    padding: 0.5rem;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: .5rem;
+}
+button:hover{
+    scale: 1.03;
+}
