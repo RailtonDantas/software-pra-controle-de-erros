@@ -17,7 +17,11 @@ body,html{
 
 }
 body{
-   background-color: #31470bc5;
+   background-image: url(imagens/download.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   background-attachment: fixed;
 }
 
 main{
@@ -53,7 +57,6 @@ ul{
     margin-top: 3rem;
     border-radius: 1rem;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.664);
-    background-color:#5F7042;
     
 }
 li{
@@ -88,11 +91,11 @@ input{
 }
 ul:hover > :not(:hover){
     scale: 0.98;
-    background-color: #00000098;
+    background-color: #2446498f;
 }
 li:hover{
     scale: 1.03;
-    background-color: #2e463269;
+    background-color: #17dfb370;
 }
 button{
     width: 10rem;
