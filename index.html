@@ -10,41 +10,55 @@
 </head>
 <body>
     <main>
-        <ul>
-            <li>
-                <h3>Atenção:</h3>
-                <input type="number" name="typeErrorOne" id="typeErrorOne">
-            </li>
-            <li>
-                <h3>Teoria:</h3>
-                <input type="number" name="typeErrorTwo" id="typeErrorTwo">
-            </li>
-            <li>
-                <h3>Interpretação:</h3>
-                <input type="number" name="typeErrorThree" id="typeErrorThree">
-            </li>
-            <li>
-                <h3>Sacada:</h3>
-                <input type="number" name="typeErrorOFour" id="typeErrorOFour">
-            </li>
-            <li>
-                <h3>Tempo:</h3>
-                <input type="number" name="typeErrorFive" id="typeErrorFive">
-            </li>
-            <li>
-                <h3>Raciocínio certo e travou:</h3>
-                <input type="number" name="typeErrorFive" id="typeErrorFive">
-            </li>
-            <li>
-                <h3>Análise de gráfico:</h3>
-                <input type="number" name="typeErrorFive" id="typeErrorFive">
-            </li>
-            <li>
-                <h3>Ficou em dúvida e marcou a errada:</h3>
-                <input type="number" name="typeErrorSix" id="typeErrorSix">
-            </li>
-            <button onclick="location.reload()">ENVIAR</button>
-        </ul>
+        <div class="containerTypeErrorsAndTypeOfGraphics">
+            <ul>
+                <li>
+                    <h3>Atenção:</h3>
+                    <input type="number" name="typeErrorOne" id="typeErrorOne">
+                </li>
+                <li>
+                    <h3>Teoria:</h3>
+                    <input type="number" name="typeErrorTwo" id="typeErrorTwo">
+                </li>
+                <li>
+                    <h3>Interpretação:</h3>
+                    <input type="number" name="typeErrorThree" id="typeErrorThree">
+                </li>
+                <li>
+                    <h3>Sacada:</h3>
+                    <input type="number" name="typeErrorOFour" id="typeErrorOFour">
+                </li>
+                <li>
+                    <h3>Tempo:</h3>
+                    <input type="number" name="typeErrorFive" id="typeErrorFive">
+                </li>
+                <li>
+                    <h3>Raciocínio certo e travou:</h3>
+                    <input type="number" name="typeErrorFive" id="typeErrorFive">
+                </li>
+                <li>
+                    <h3>Análise de gráfico:</h3>
+                    <input type="number" name="typeErrorFive" id="typeErrorFive">
+                </li>
+                <li>
+                    <h3>Ficou em dúvida e marcou a errada:</h3>
+                    <input type="number" name="typeErrorSix" id="typeErrorSix">
+                </li>
+                <button onclick="location.reload()">ENVIAR</button>
+            </ul>
+            <div class="containerTypeGraphics">
+                <h3>Tipos de gráficos</h3>
+                <select name="typeGraphics" id="typeGraphics">
+                    <option value="pie">Torta</option>
+                    <option value="doughnut">Rosquinha</option>
+                    <option value="bar">Barra</option>
+                    <option value="line">Linha</option>
+                    <option value="radar">Radar</option>
+                    <option value="polarArea">Área polar</option>
+                </select>
+                <button id="btnToggleGraphics" onclick="location.reload()">Trocar Gráfico</button>
+            </div>
+        </div>
         <div id="containerGraphics">
             <canvas id="myChart"></canvas>
           </div>

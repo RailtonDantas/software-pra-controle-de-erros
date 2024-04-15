@@ -1,7 +1,9 @@
 
 const btnSubmit = document.querySelector("button")
+const btnToggle = document.querySelector("#btnToggleGraphics")
 // const [inputAtention,inputTheory,InputInterpretation,inputInsight,inputTime,inputLocked,inputGraphics] = document.getElementsByTagName("input")
 const arrayOfInputs = [...document.getElementsByTagName("input")]
+const select = document.querySelector("select")
 
 
 btnSubmit.addEventListener("click", () => {
@@ -11,21 +13,10 @@ btnSubmit.addEventListener("click", () => {
     }
 })
 
+btnToggle.addEventListener('click', () => {
+  localStorage.setItem('typeGraphic',select.value)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})
 
 const ctx = document.getElementById('myChart');
 
@@ -35,7 +26,7 @@ Chart.defaults.font.family = 'Helvetica,sans-serif'
 
 
 new Chart(ctx, { 
-  type: 'pie',
+  type: localStorage.getItem('typeGraphic'),
   data: {
     labels: ['ATENÇÃO', 'TEORIA','INTERPRETAÇÃO','SACADA','TEMPO','RACIOCÍNIO CERTO MAS TRAVOU','ANÁLISE DE GRÁFICO','FICOU EM DÚVIDA E MARCOU A ERRADA'],
     datasets: [{
