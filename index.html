@@ -46,17 +46,29 @@
                 </li>
                 <button onclick="location.reload()">ENVIAR</button>
             </ul>
-            <div class="containerTypeGraphics">
-                <h3>Tipos de gráficos</h3>
-                <select name="typeGraphics" id="typeGraphics">
-                    <option value="pie">Torta</option>
-                    <option value="doughnut">Rosquinha</option>
-                    <option value="bar">Barra</option>
-                    <option value="line">Linha</option>
-                    <option value="radar">Radar</option>
-                    <option value="polarArea">Área polar</option>
-                </select>
-                <button id="btnToggleGraphics" onclick="location.reload()">Trocar Gráfico</button>
+            <div id="containerTypeGraphicsAndPercentErrors">
+                <div class="containerTypeGraphics">
+                    <h3>Tipos de gráficos</h3>
+                    <select name="typeGraphics" id="typeGraphics" >
+                        <option value="pie">Torta</option>
+                        <option value="doughnut">Rosquinha</option>
+                        <option value="bar">Barra</option>
+                        <option value="line">Linha</option>
+                        <option value="radar">Radar</option>
+                        <option value="polarArea">Área polar</option>
+                    </select>
+                    <button id="btnToggleGraphics" onclick="location.reload()">Trocar Gráfico</button>
+                </div>
+                <div id="containerPercent">
+                 <div class="percentItem" id="atentionError"><p>ERRO POR ATENÇÃO: <span></span></p></div>
+                 <div class="percentItem" id="theoryError"><p>ERRO POR TEORIA: <span></span></p></div>
+                 <div class="percentItem" id="interpretationError"><p>ERRO POR INTERPRETAÇÃO: <span></span></p></div>
+                 <div class="percentItem" id="balconyError"><p>FALTA DE SACADA: <span></span></p></div>
+                 <div class="percentItem" id="timeError"><p>FALTA DE TEMPO: <span></span></p></div>
+                 <div class="percentItem" id="bugError"><p>RACICÍNIO CERTO MAS ERROU: <span></span></p></div>
+                 <div class="percentItem" id="graphicError"><p>ERRO POR ANÁLISE DE GRÁFICO: <span></span></p></div>
+                 <div class="percentItem" id="markError"><p>FICOU EM DÚVIDA E MARCOU A ERRADA: <span></span></p></div>
+                </div>
             </div>
         </div>
         <div id="containerGraphics">

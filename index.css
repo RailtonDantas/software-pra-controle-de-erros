@@ -48,7 +48,7 @@ main{
     flex-direction: column;
     height: 100vh;
     align-items: center;
-    gap: 3rem;
+    gap: 1.5rem;
 }
 ul{
     height: fit-content;
@@ -115,14 +115,63 @@ button{
 button:hover{
     scale: 1.03;
 }
-
+#containerTypeGraphicsAndPercentErrors{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   height: fit-content;
+   justify-content: space-between;
+}
+#containerPercent{
+    display: flex;
+    flex-direction: column;
+    width: 30rem ;
+    height: 18rem;
+    border: 0.5px solid black;
+    border-left: none;
+}
+.percentItem{
+    flex-grow: 1;
+    background-color: aqua;
+    border-left: 0.5px solid rgb(0, 0, 0);
+    padding: 0.5rem;
+}
+#atentionError{
+    background-color: #32666B;
+}
+#theoryError{
+    background-color:#33426C;
+}
+#interpretationError{
+    background-color: #4E81A6;
+}
+#balconyError{
+    background-color: #254E45;
+}
+#timeError{
+    background-color: #706ADD;
+}
+#bugError{
+    background-color: #B4CEE0;
+}
+#graphicError{
+    background-color: #56636C;
+}
+#markError{
+    background-color: #5EE1C5;
+}
+.percentItem > p{
+    font-size: 1.1rem;
+}
 .containerTypeGraphics{
     display:flex;
     flex-direction: column;
+    align-self: flex-start;
     background-color: transparent;
     border: 0.1rem solid black;
     border-radius: 1rem;
     height: fit-content;
+    width: 20rem;
     padding: 1rem;
     justify-content: space-evenly;
     gap: 1rem;

@@ -3,20 +3,47 @@ const btnSubmit = document.querySelector("button")
 const btnToggle = document.querySelector("#btnToggleGraphics")
 // const [inputAtention,inputTheory,InputInterpretation,inputInsight,inputTime,inputLocked,inputGraphics] = document.getElementsByTagName("input")
 const arrayOfInputs = [...document.getElementsByTagName("input")]
+const [atention,theory] = document.getElementsByClassName("percentItem")
+const containerPercent = document.querySelector("#containerPercent")
+const paragraphs = [...document.querySelectorAll(".percentItem > p > span")]
 const select = document.querySelector("select")
+let sum = 0
+
+
+
+
+if(!localStorage.key('typeGraphic')){
+  localStorage.setItem("typeGraphic",'pie')
+}
+
+if(localStorage.length > 0){
+  for(let c = 0; c < localStorage.length; c++){
+    sum += Number(localStorage.getItem(`typeErro${c}`))
+  }
+  localStorage.setItem("somaTotal",sum)
+}
+for(let c = 0; c < paragraphs.length; c++){
+  let percent = `${(((Number(localStorage.getItem(`typeErro${c}`)) || 0)/(Number(localStorage.getItem("somaTotal")) || 1))*100).toFixed(2)}%`
+
+  paragraphs[c].textContent = percent
+}
 
 
 btnSubmit.addEventListener("click", () => {
-    for(let c = 0; c < arrayOfInputs.length; c++){
-        let guardarValor = Number(arrayOfInputs[c].value) + Number(localStorage.getItem(`typeErro${c}`))
-        localStorage.setItem(`typeErro${c}`,guardarValor)
-    }
+  for(let c = 0; c < arrayOfInputs.length; c++){
+    let guardarValor = Number(arrayOfInputs[c].value) + Number(localStorage.getItem(`typeErro${c}`))
+    localStorage.setItem(`typeErro${c}`,guardarValor)
+  }
+  attPercent()
 })
+
+
+
 
 btnToggle.addEventListener('click', () => {
   localStorage.setItem('typeGraphic',select.value)
-
 })
+
 
 const ctx = document.getElementById('myChart');
 
