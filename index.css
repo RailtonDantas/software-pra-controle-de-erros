@@ -10,6 +10,12 @@
 :root{
     font-size: 62.5%;
 }
+
+/* classes pra interação */
+
+
+/*fim*/
+
 body,html{
     height: 100vh;
     width: 100vw;
@@ -96,7 +102,7 @@ input{
     text-shadow: none;
     font-weight: bold;
 }
-ul:hover > :not(:hover){
+ul:hover > li:not(:hover){
     scale: 0.98;
     background-color: #2446498f;
 }
@@ -105,15 +111,25 @@ li:hover{
     background-color: #17dfb370;
 }
 button{
-    width: 10rem;
+    width: 12rem;
     align-self: center;
     padding: 0.5rem;
     background-color: black;
     border: 0.1rem solid black;
     border-radius: .5rem;
+    transition-duration: 0.3;
+}
+#containerButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
 }
 button:hover{
     scale: 1.03;
+}
+button:active{
+    scale: 1;
 }
 #containerTypeGraphicsAndPercentErrors{
    width: 100%;
@@ -125,6 +141,7 @@ button:hover{
 #containerPercent{
     display: flex;
     flex-direction: column;
+    opacity: 0;
     width: 30rem ;
     height: 18rem;
     border: 0.5px solid black;
@@ -176,6 +193,8 @@ button:hover{
     justify-content: space-evenly;
     gap: 1rem;
     background-color: #0000004f;
+    opacity: 0;
+
 
 }
 select{

@@ -1,15 +1,15 @@
 
-const btnSubmit = document.querySelector("button")
 const btnToggle = document.querySelector("#btnToggleGraphics")
 // const [inputAtention,inputTheory,InputInterpretation,inputInsight,inputTime,inputLocked,inputGraphics] = document.getElementsByTagName("input")
 const arrayOfInputs = [...document.getElementsByTagName("input")]
 const [atention,theory] = document.getElementsByClassName("percentItem")
 const containerPercent = document.querySelector("#containerPercent")
+const containerTypeGraphics = document.querySelector(".containerTypeGraphics")
 const paragraphs = [...document.querySelectorAll(".percentItem > p > span")]
 const select = document.querySelector("select")
+const [btn_showGraphics,btnSubmit,btn_showPercent] = document.querySelectorAll("#containerButtons > button") 
 let sum = 0
-
-
+select.style.opacity
 
 
 if(!localStorage.key('typeGraphic')){
@@ -23,7 +23,7 @@ if(localStorage.length > 0){
   localStorage.setItem("somaTotal",sum)
 }
 for(let c = 0; c < paragraphs.length; c++){
-  let percent = `${(((Number(localStorage.getItem(`typeErro${c}`)) || 0)/(Number(localStorage.getItem("somaTotal")) || 1))*100).toFixed(2)}%`
+  let percent = `${(((Number(localStorage.getItem(`typeErro${c}`)))/(Number(localStorage.getItem("somaTotal")) || 1))*100).toFixed(2)}%`
 
   paragraphs[c].textContent = percent
 }
@@ -34,12 +34,26 @@ btnSubmit.addEventListener("click", () => {
     let guardarValor = Number(arrayOfInputs[c].value) + Number(localStorage.getItem(`typeErro${c}`))
     localStorage.setItem(`typeErro${c}`,guardarValor)
   }
-  attPercent()
 })
 
-
-
-
+btn_showGraphics.addEventListener("click",() => {
+  if(containerTypeGraphics.style.opacity == 0){
+   
+      containerTypeGraphics.style.opacity = '1'
+  }
+  else{
+    containerTypeGraphics.style.opacity = '0'
+  }
+})
+btn_showPercent.addEventListener("click",() => {
+  if(containerPercent.style.opacity == 0){
+   
+      containerPercent.style.opacity = '1'
+  }
+  else{
+    containerPercent.style.opacity = '0'
+  }
+})
 btnToggle.addEventListener('click', () => {
   localStorage.setItem('typeGraphic',select.value)
 })
