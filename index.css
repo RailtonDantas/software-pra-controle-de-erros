@@ -28,6 +28,7 @@ body{
    background-size: cover;
    background-position: center center;
    background-attachment: fixed;
+   overflow-x: hidden;
 }
 
 main{
@@ -123,7 +124,8 @@ button{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 100%;
+    width: 80%;
+
 }
 button:hover{
     scale: 1.03;
@@ -143,13 +145,13 @@ button:active{
     flex-direction: column;
     opacity: 0;
     width: 30rem ;
-    height: 18rem;
+    height: fit-content;
     border: 0.5px solid black;
     border-left: none;
 }
 .percentItem{
     flex-grow: 1;
-    background-color: aqua;
+    background-color: #00ffff;
     border-left: 0.5px solid rgb(0, 0, 0);
     padding: 0.5rem;
 }
